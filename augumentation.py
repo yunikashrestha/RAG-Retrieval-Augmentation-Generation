@@ -1,35 +1,3 @@
-# from google import genai #Gemini/GenAI client library
-# import os
-# from dotenv import load_dotenv #Loads variables from a .env file
-# from google.genai import types #an access GEMINI_API_KEY 
-# from retrieval import retrieval
-
-# load_dotenv()
-# def chat(prompt:str):
-#     client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
-#     response = client.models.generate_content(
-#     model = "gemini-2.5-flash-lite", 
-#     contents=prompt,
-#     )
-#     return response
-
-# def prompt_creation_and_api_calls():
-#     query = "5 Cheapest tripod to buy"
-#     #this gets the retrived products(combined and cleaned) from the query and creates the prompt
-#     augmented_document = retrieval(query)
-#     prompt = f"""
-#     You are a helpful and friendly assistant that answers questions about Daraz products.
-#     Use the information from the passages below to provide a clear and complete answer.
-#     Explain things in simple terms for a non-technical customer.
-#     QUESTION: '{query}'
-#     PASSAGE: '{augmented_document}' 
-#     """
-
-#     #API CALL
-#     response = chat(prompt)
-#     print(response.text)
-
-# augumentation.py
 from google import genai  # Gemini client
 import os
 from dotenv import load_dotenv
